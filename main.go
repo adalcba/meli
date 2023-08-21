@@ -29,7 +29,6 @@ func main() {
 
 	// Create a router
 	http.HandleFunc("/getAllInfo", ipInfoHandler)
-	// http.HandleFunc("/items/add", addItem)
 
 	// Start the server
 	port := ":8080"
