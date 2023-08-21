@@ -1,0 +1,27 @@
+basePath: /
+definitions:
+  main.Response:
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: Get Country and Currency info based on Ip Address.
+  title: MELI REST API
+  version: "1.0"
+paths:
+  /getAllInfo:
+    get:
+      description: Get information about an IP address
+      parameters:
+      - description: IP Address
+        in: query
+        name: ip
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Response'
+      summary: Get IP information
+swagger: "2.0"
